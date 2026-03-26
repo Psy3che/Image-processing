@@ -169,8 +169,32 @@ Ideal Band Stop Filter：
 python image_processing_full_updated.py ibsf noise.png out13_ibsf.png --cutoff 20 --cutoff2 60
 ```
 
----
-
+**17. Sobel Edge Detector（Sobel 边缘检测器）17. Sobel 边缘检测器**
+```bash
+python image_processing_full_updated.py edge_sobel input.JPG output_edge_sobel.pgm
+```
+**18. Prewitt Edge Detector（普雷维特边缘检测器）**
+```bash
+python image_processing_full_updated.py edge_prewitt input.JPG output_edge_prewitt.pgm
+```
+**19. Roberts Edge Detector（罗伯茨边缘检测器）**
+```bash
+python image_processing_full_updated.py edge_roberts input.JPG output_edge_roberts.pgm
+```
+**20. Edge Detector Comparison（边缘检测器比较）**
+```bash
+python image_processing_full_updated.py edge_compare input.JPG output_edge_compare.pgm
+```
+**21. Hough Transform (Rectangle Orientation)（霍夫变换：矩形方向检测）**
+```bash
+python image_processing_full_updated.py hough_rect input.JPG output_hough_rect.JPG
+```
+终端输出示例
+Estimated rectangle orientation: 89.73 degrees
+**22. Skeletonization（骨骼化）**
+```bash
+python image_processing_full_updated.py skeleton input.JPG output_skeleton.pgm
+```
 # Recommended Full Test Sequence
 
 建议完整测试顺序：
