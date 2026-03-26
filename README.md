@@ -188,9 +188,10 @@ python image_processing_full_updated.py edge_compare input.JPG output_edge_compa
 **21. Hough Transform (Rectangle Orientation)（霍夫变换：矩形方向检测）**
 ```bash
 python image_processing_full_updated.py hough_rect input.JPG output_hough_rect.JPG
-```
+
 终端输出示例
 Estimated rectangle orientation: 89.73 degrees
+```
 **22. Skeletonization（骨骼化）**
 ```bash
 python image_processing_full_updated.py skeleton input.JPG output_skeleton.pgm
