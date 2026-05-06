@@ -12,7 +12,17 @@ h, w = img.shape
 
 # 生成低通掩码
 y, x = np.ogrid[:h, :w]
+# ILPF
 mask = np.sqrt((y - h//2)**2 + (x - w//2)**2) <= D0
+# IHPF
+# mask = np.sqrt((y - h//2)**2 + (x - w//2)**2) > D0
+# # ===================== 滤波器选择 =====================
+# # 1. IBPF 理想带通滤波（保留 D0 ~ D1 之间的频率）
+# mask = (dist > D0) & (dist <= D1)
+
+# # 2. IBSF 理想带阻滤波（去掉 D0 ~ D1 之间的频率）
+# # mask = (dist <= D0) | (dist > D1)
+# # ============================
 
 # 滤波 + 逆变换
 filtered = np.abs(np.fft.ifft2(np.fft.ifftshift(dft * mask)))
